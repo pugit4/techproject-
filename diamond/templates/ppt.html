@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    padding: 2px 4px;
+    text-align: center;    
+}   
+
+th {
+    background-color: #555;
+    color: black;
+    font-weight: bold;
+    text-transform: Capitalize;
+}
+</style>
+</head>
+<body>
+
+<h1>List of Members asigned to diamond project</h1>
+
+<table style='width:50%'>
+    <tr>
+        <th>firstname</th>
+        <th>lastname</th>
+        <th>position</th>
+        <th>employee_id</th>
+    <tr>
+{% for x in members%}   
+    <tr>
+        <td>{{ x.firstname }}</td>
+        <td>{{ x.lastname }}</td>
+        <td>{{ x.position }}</td>
+        <td>{{ x.employee_id }}</td>
+    </tr>
+{% endwith %}
+</table>
+
+</body>
+</html>
